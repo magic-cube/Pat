@@ -30,6 +30,8 @@ import java.util.Scanner;
  */
 public class T1004 {
 
+	
+
 	public static void main(String[] args) {
 		List<Students> list = new ArrayList<Students>();
 		Scanner in= new Scanner(System.in);
@@ -49,12 +51,20 @@ public class T1004 {
 //		}
 		int num = 0;
 		int maxScore=-1;
-		for(int i=0;i<list.size()-1;i++){
-			if(list.get(i).score>list.get(i+1).score){
+		/*
+		 * 此处应加个排序，待我明日再改
+		 * e,随手改好了，OK！
+		 */
+		for(int i=0;i<list.size();i++){
+			if(list.get(i).score>maxScore){
+				maxScore=list.get(i).score;
 				num=i;
 			}
 		}
-		System.out.println(list.get(num).name+list.get(num).num+list.get(num).score);
+		
+		System.out.println();
+		System.out.println("成绩最高的学生信息如下：");
+		System.out.println("姓名： "+list.get(num).name+" "+"学号： "+list.get(num).num+" "+"成绩： "+list.get(num).score);
 
 	}
 
