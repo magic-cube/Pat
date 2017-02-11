@@ -11,7 +11,7 @@ public class Demo01 {
 	public static void main(String[] args) {
 		int a=10;
 		int b=10;
-		method1(a,b);
+		method(a,b);
 		System.out.println("a="+a);
 		System.out.println("b="+b);
 	}
